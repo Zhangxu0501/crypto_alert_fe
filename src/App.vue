@@ -1,24 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <UserRegister msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <router-view></router-view> <!-- 这里将负责渲染路由组件 -->
+  </div>
 </template>
 
 <script>
 
-    import { createApp } from 'vue';
-    import App from './App.vue';
-    import router from './router';
-    import UserRegister from './components/UserRegister.vue'
 
-
-    createApp(App).use(router).mount('#app');
 
 
 export default {
   name: 'App',
-  components: {
-      UserRegister
-  }
 }
 </script>
 
